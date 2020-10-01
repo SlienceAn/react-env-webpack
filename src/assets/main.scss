@@ -1,0 +1,23 @@
+* {
+    font-family: '微軟正黑體';
+}
+
+a {
+    color: #333 !important;
+
+    &:hover {
+        text-decoration: none !important;
+        color: blue !important;
+
+    }
+}
+
+.common-bg {
+    background: #2C3E50;
+}
+
+.w-80 {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
