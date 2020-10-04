@@ -2,7 +2,8 @@ import React from 'react';
 import Slide from '../assets/slider-bg.jpg'
 import TypeImg from '../assets/type-bg.jpg'
 import { Col, Form, Button, Card } from 'react-bootstrap'
-import { Container, SlideSection } from '../component/static/publicStyle'
+import { Container, SlideSection, HolidyType } from '../component/static/publicStyle'
+import TypeBg from '../assets/big-icons.png'
 const SelectPlace = () => {
     const style = {
         whiteSpace: 'nowrap',
@@ -11,8 +12,8 @@ const SelectPlace = () => {
         fontSize: '1.5rem'
     }
     const aside = {
-     borderRight:'.5px solid #aaa',
-     textAlign:'right'
+        borderRight: '.5px solid #aaa',
+        textAlign: 'right'
     }
     return (
         <div className="w-100 common-bg">
@@ -37,7 +38,6 @@ const SelectPlace = () => {
     )
 }
 const SpecialOffer = (props) => {
-    console.log(props)
     return (
         <React.Fragment>
             <div className="text-center">
@@ -48,7 +48,7 @@ const SpecialOffer = (props) => {
                 {Object.values(props).map(el =>
                     <Col>
                         <Card>
-                            <Card.Img src={el.img} />
+                            <Card.Img src={el.img} alt="missing"/>
                             <Card.Body>
                                 <Card.Title>{el.title}</Card.Title>
                                 <Card.Text>{el.text}</Card.Text>
@@ -68,7 +68,7 @@ const Clients = (props) => {
     )
 }
 const Home = (props) => {
-    console.log(props)
+    const pos = [0, -155,-309,-464,-620,-775]
     return (
         <React.Fragment>
             <SlideSection bg={Slide} size="665px">
@@ -80,8 +80,7 @@ const Home = (props) => {
             <SelectPlace />
             <SpecialOffer {...props.SpecialValue} />
             <SlideSection bg={TypeImg} size="465px">
-                <section>
-                </section>
+                {pos.map(el => <HolidyType bg={TypeBg} pos={el} />)}
             </SlideSection>
             <Clients {...props.ClientValue} />
         </React.Fragment>
