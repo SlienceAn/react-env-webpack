@@ -23,7 +23,6 @@ export const SlideSection = styled.div`
 export const HolidyType = styled.div`
     width:126px;  
     min-height:126px;
-    border:1px solid;
     background-image:url(${props => props.bg});
     background-repeat:no-repeat;
     background-position:${props => props.pos}px -126px;

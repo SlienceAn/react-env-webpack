@@ -48,7 +48,7 @@ const SpecialOffer = (props) => {
                 {Object.values(props).map(el =>
                     <Col>
                         <Card>
-                            <Card.Img src={el.img} alt="missing"/>
+                            <Card.Img src={el.img} alt="missing" />
                             <Card.Body>
                                 <Card.Title>{el.title}</Card.Title>
                                 <Card.Text>{el.text}</Card.Text>
@@ -68,7 +68,14 @@ const Clients = (props) => {
     )
 }
 const Home = (props) => {
-    const pos = [0, -155,-309,-464,-620,-775]
+    const pos = [
+        { pos: 0, text: 'Cruise' },
+        { pos: -155, text: 'City Breaks' },
+        { pos: -309, text: 'Honeymoon' },
+        { pos: -464, text: 'Adventure' },
+        { pos: -620, text: 'Safari' },
+        { pos: -775, text: 'Beach' }
+    ]
     return (
         <React.Fragment>
             <SlideSection bg={Slide} size="665px">
@@ -80,7 +87,10 @@ const Home = (props) => {
             <SelectPlace />
             <SpecialOffer {...props.SpecialValue} />
             <SlideSection bg={TypeImg} size="465px">
-                {pos.map(el => <HolidyType bg={TypeBg} pos={el} />)}
+                {pos.map(el => <section className="p-5">
+                    <HolidyType bg={TypeBg} pos={el.pos} />
+                    <p>{el.text}</p>
+                </section>)}
             </SlideSection>
             <Clients {...props.ClientValue} />
         </React.Fragment>
