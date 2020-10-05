@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import { specialChange, clientChange } from '../action/index'
-import { initSpecial, initClient, initBlog, initHoliday } from '../store'
+import { initSpecial, initClient, initBlog, initHoliday, initAbout } from '../store'
 const SpecialReducer = (state = initSpecial, action) => {
     switch (action.type) {
         case specialChange:
@@ -30,9 +30,16 @@ const HolidayReducer = (state = initHoliday, action) => {
             return state
     }
 }
+const AboutReducer = (state = initAbout, action) => {
+    switch (action.type) {
+        default:
+            return state
+    }
+}
 export const DataReducer = combineReducers({
     SpecialReducer,
     ClientReducer,
     BlogReducer,
-    HolidayReducer
+    HolidayReducer,
+    AboutReducer
 })

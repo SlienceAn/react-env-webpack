@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Holidy = () => {
+const Holiday = (props) => {
+    console.log(props)
     return (
         <div>
             假期優惠
@@ -8,4 +9,4 @@ const Holidy = () => {
     );
 };
 
-export default Holidy;
+export default Holiday;

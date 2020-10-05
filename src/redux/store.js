@@ -23,9 +23,18 @@ export const initClient = {
 }
 
 export const initBlog = {
-    data: []
+    data: [
+        { name: 'blog', text: 'zxc' }
+    ]
 }
 
 export const initHoliday = {
-    data: []
+    data: [
+        { name: 'holiday', text: 'sdf' }
+    ]
+}
+export const initAbout = {
+    data: [
+        "關於我們"
+    ]
 }
