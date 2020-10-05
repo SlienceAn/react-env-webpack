@@ -36,10 +36,10 @@ module.exports = {
             }
         ]
     },
-    performance: {
-        hints: 'warning',
-        hints: 'error'
-    },
+    // performance: {
+    //     hints: 'warning',
+    //     hints: 'error'
+    // },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'static/css/[name].[hash].css'
@@ -58,6 +58,6 @@ module.exports = {
         contentBase: './dist', //設定DevServer HTTP伺服器的檔案根目錄
         historyApiFallback: true, //是否開啟 HTML5 History API 網頁
         profile: true, //是否捕捉webpack建置效能資訊
-        cache: false //是否啟用快取
+       
     }
 };

@@ -21,7 +21,6 @@ $common-bg:#2C3E50;
 
 .w-80 {
     width: 80%;
-    display: flex;
     margin: 0 auto;
 }
 
@@ -70,5 +69,35 @@ $common-bg:#2C3E50;
     display: inline-block;
     border: 1px solid #fff;
     border-radius: .5rem;
-    margin: .2rem ;
+    margin: .2rem;
+}
+
+.admin {
+    width: auto;
+    position: absolute;
+    bottom: 13.5rem;
+    left: 1.2rem;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.card-section {
+    width: 100%;
+    color: #fff;
+    padding: .5rem;
+}
+
+.blog-section {
+    @extend .card-section;
+    background: $btn-theme-color;
+}
+
+.holiday-nav {
+    @extend .card-section;
+    background: $common-bg;
+}
+
+.holiday-bottom {
+    @extend .card-section;
+    background: $btn-theme-color;
 }

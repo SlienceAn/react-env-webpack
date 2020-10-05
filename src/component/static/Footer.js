@@ -38,7 +38,7 @@ const Footer = () => {
                 </Col>
                 <Col className="p-3">
                     <header className="footer-header">標籤</header>
-                    {tags.map(el => <div className="tags">{el}</div>)}
+                    {tags.map(el => <div className="tags" key={el}>{el}</div>)}
                 </Col>
                 <Col className="p-3">
                     <header className="footer-header">住址</header>

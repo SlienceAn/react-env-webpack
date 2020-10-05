@@ -2,7 +2,20 @@ import S1 from '../assets/special-01.jpg'
 import S2 from '../assets/special-02.jpg'
 import S3 from '../assets/special-03.jpg'
 import S4 from '../assets/special-04.jpg'
-
+import blogPlc01 from '../assets/blog-pic-01.jpg'
+import blogPlc02 from '../assets/blog-pic-02.jpg'
+import blogPlc03 from '../assets/blog-pic-03.jpg'
+import blogPlc04 from '../assets/blog-pic-04.jpg'
+import adminPic01 from '../assets/admin-pic-01.jpg'
+import adminPic02 from '../assets/admin-pic-02.jpg'
+import adminPic03 from '../assets/admin-pic-03.jpg'
+import adminPic04 from '../assets/admin-pic-04.jpg'
+import D2 from '../assets/d2.jpg'
+import D6 from '../assets/d6.jpg'
+import D7 from '../assets/d7.jpg'
+import D5 from '../assets/d5.jpg'
+import D3 from '../assets/d3.jpg'
+import D1 from '../assets/d1.jpg'
 export const initSpecial = {
     data: [
         { img: S1, title: '北陸立山紅葉、合掌村兼六園楓情、名古屋魅力遊5日', text: '$39,999' },
@@ -14,24 +27,25 @@ export const initSpecial = {
 
 export const initClient = {
     data: [
-        { img: 'http://fakeimg.pl/440x320/282828/EAE0D0/', title: '', text: '' },
-        { img: 'http://fakeimg.pl/440x320/282828/EAE0D0/', title: '', text: '' },
-        { img: 'http://fakeimg.pl/440x320/282828/EAE0D0/', title: '', text: '' },
-        { img: 'http://fakeimg.pl/440x320/282828/EAE0D0/', title: '', text: '' },
+        { img: '', title: '', text: '' },
+        { img: '', title: '', text: '' },
+        { img: '', title: '', text: '' },
+        { img: '', title: '', text: '' },
 
     ]
 }
 
 export const initBlog = {
     data: [
-        { name: 'blog', text: 'zxc' }
+        { img: blogPlc01, admin: adminPic01, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: blogPlc02, admin: adminPic02, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: blogPlc03, admin: adminPic03, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: blogPlc04, admin: adminPic04, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+
     ]
 }
-
 export const initHoliday = {
-    data: [
-        { name: 'holiday', text: 'sdf' }
-    ]
+    data: [D1, D2, D3, D5, D6, D7]
 }
 export const initAbout = {
     data: [

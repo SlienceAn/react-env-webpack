@@ -4,7 +4,7 @@ import TypeImg from '../assets/type-bg.jpg'
 import { Col, Form, Button, Card } from 'react-bootstrap'
 import { Container, SlideSection, HolidyType } from '../component/static/publicStyle'
 import TypeBg from '../assets/big-icons.png'
-const SelectPlace = () => {
+export const SelectPlace = () => {
     const style = {
         whiteSpace: 'nowrap',
         paddingRight: '20px',
@@ -44,9 +44,9 @@ const SpecialOffer = (props) => {
                 <h2>特別優惠</h2>
                 <p>2020最受歡迎旅遊地點</p>
             </div>
-            <section className="w-80">
+            <section className="w-80 d-flex">
                 {Object.values(props).map(el =>
-                    <Col>
+                    <Col key={el.img}>
                         <Card>
                             <Card.Img src={el.img} alt="missing" />
                             <Card.Body>
@@ -87,7 +87,7 @@ const Home = (props) => {
             <SelectPlace />
             <SpecialOffer {...props.SpecialValue} />
             <SlideSection bg={TypeImg} size="465px">
-                {pos.map(el => <section className="p-5">
+                {pos.map(el => <section className="p-5" key={el.pos}>
                     <HolidyType bg={TypeBg} pos={el.pos} />
                     <p>{el.text}</p>
                 </section>)}
