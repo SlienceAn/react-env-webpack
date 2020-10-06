@@ -40,18 +40,18 @@ export const SelectPlace = () => {
 const SpecialOffer = (props) => {
     return (
         <React.Fragment>
-            <div className="text-center">
+            <div className="text-center mt-3 mb-3">
                 <h2>特別優惠</h2>
                 <p>2020最受歡迎旅遊地點</p>
             </div>
-            <section className="w-80 d-flex">
+            <section className="w-80 d-flex mb-3">
                 {Object.values(props).map(el =>
                     <Col key={el.img}>
                         <Card>
                             <Card.Img src={el.img} alt="missing" />
                             <Card.Body>
                                 <Card.Title>{el.title}</Card.Title>
-                                <Card.Text>{el.text}</Card.Text>
+                                <Card.Text style={{ color: 'red', fontSize: '1.5rem' }}>{el.text}</Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>)}
@@ -61,7 +61,7 @@ const SpecialOffer = (props) => {
 }
 const Clients = (props) => {
     return (
-        <div className="text-center">
+        <div className="text-center mb-3 mt-3">
             <h2>旅遊回饋</h2>
             <p>聽聽看其他人怎麼說!</p>
         </div>
@@ -77,7 +77,7 @@ const Home = (props) => {
         { pos: -775, text: 'Beach' }
     ]
     return (
-        <React.Fragment>
+        <div>
             <SlideSection bg={Slide} size="665px">
                 <section>
                     <h1>來點旅行吧!</h1>
@@ -93,7 +93,7 @@ const Home = (props) => {
                 </section>)}
             </SlideSection>
             <Clients {...props.ClientValue} />
-        </React.Fragment>
+        </div>
     );
 }
 

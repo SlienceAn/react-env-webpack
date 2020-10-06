@@ -13,13 +13,12 @@ import './assets/page.scss'
 const store = createStore(DataReducer)
 const RouterMap = () => {
     let location = useLocation();
-    console.log(location)
     return (
         <TransitionGroup>
             <CSSTransition
                 key={location.pathname}
                 classNames="page"
-                timeout={300}
+                timeout={100}
             >
                 <Switch>
                     <Route exact path="/" component={StateHome} />

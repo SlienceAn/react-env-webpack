@@ -1,0 +1,88 @@
+$card-main-color:rgb(44, 62, 80);
+$timeline-bg:#EDEEF0;
+$content:rgb(224, 224, 224);
+
+.timeline-section {
+    position: relative;
+    background-color: #fff;
+    min-height: 50vh;
+
+    &::after {
+        //時間軸軸線
+        content: '';
+        position: absolute;
+        width: 6px;
+        background: $card-main-color;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -12.5px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+
+.triangle {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+
+}
+
+.left {
+    left: 0;
+
+    &::before {
+        @extend .triangle;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent $content;
+    }
+}
+
+.right {
+    left: 50%;
+
+    &::before {
+        @extend .triangle;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $content transparent transparent;
+    }
+
+    &::after {
+        left: -12.5px;
+    }
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: $content;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}

@@ -3,7 +3,7 @@ import { Col, Card } from 'react-bootstrap'
 import { SelectPlace } from './Home'
 const Holiday = (props) => {
     return (
-        <React.Fragment>
+        <div>
             <SelectPlace />
             <div className="w-80 mt-3 mb-3 d-flex flex-wrap">
                 {props.HolidayValue.map(el =>
@@ -31,7 +31,7 @@ const Holiday = (props) => {
                         </Card>
                     </Col>)}
             </div>
-        </React.Fragment>
+        </div>
     );
 };
 

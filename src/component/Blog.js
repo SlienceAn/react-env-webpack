@@ -3,7 +3,7 @@ import { Col, Card, Button } from 'react-bootstrap'
 import { SelectPlace } from './Home'
 const Blog = props => {
     return (
-        <React.Fragment>
+        <div>
             <SelectPlace />
             <div className="w-80 mt-3 mb-3 d-flex flex-wrap">
                 {props.BlogValue.map(el => <Col lg={6} className="mb-3" key={el.admin}>
@@ -32,7 +32,7 @@ const Blog = props => {
                     </Card>
                 </Col>)}
             </div>
-        </React.Fragment>
+        </div>
     );
 };
 

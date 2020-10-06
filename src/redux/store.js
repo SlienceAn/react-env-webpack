@@ -19,9 +19,9 @@ import D1 from '../assets/d1.jpg'
 export const initSpecial = {
     data: [
         { img: S1, title: '北陸立山紅葉、合掌村兼六園楓情、名古屋魅力遊5日', text: '$39,999' },
-        { img: S2, title: '小松層楓、立山峽谷鐵道、白川鄉林道、高山古街5日', text: '$30,000' },
+        { img: S2, title: '小松層楓、立山峽谷鐵道、白川鄉林道、高山古街5日', text: '$41,200' },
         { img: S3, title: '【能登假期】秋楓帝皇‧立山紅妝‧加賀屋懷石‧溫泉名景5日', text: '$30,000' },
-        { img: S4, title: '小松魅力金澤、OUTLET古街樂購、松本城合掌村5日', text: '$30,000' },
+        { img: S4, title: '小松魅力金澤、OUTLET古街樂購、松本城合掌村5日', text: '$52,870' },
     ]
 }
 
@@ -49,6 +49,13 @@ export const initHoliday = {
 }
 export const initAbout = {
     data: [
-        "關於我們"
+        { title: '2016-07-28', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '2017-04-22', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '2017-08-25', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '2018-09-12', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '2018-10-02', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '2019-01-05', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '2020-01-09', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+
     ]
 }
