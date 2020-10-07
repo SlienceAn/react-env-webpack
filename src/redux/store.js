@@ -22,15 +22,17 @@ export const initSpecial = {
         { img: S2, title: '小松層楓、立山峽谷鐵道、白川鄉林道、高山古街5日', text: '$41,200' },
         { img: S3, title: '【能登假期】秋楓帝皇‧立山紅妝‧加賀屋懷石‧溫泉名景5日', text: '$30,000' },
         { img: S4, title: '小松魅力金澤、OUTLET古街樂購、松本城合掌村5日', text: '$52,870' },
+
     ]
 }
 
 export const initClient = {
     data: [
-        { img: '', title: '', text: '' },
-        { img: '', title: '', text: '' },
-        { img: '', title: '', text: '' },
-        { img: '', title: '', text: '' },
+        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
 
     ]
 }

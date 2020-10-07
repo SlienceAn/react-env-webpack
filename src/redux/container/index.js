@@ -3,10 +3,16 @@ import Home from '../../component/Home'
 import Blog from '../../component/Blog'
 import About from '../../component/About'
 import Holiday from '../../component/Holiday'
-const mapStateToProps = (store) => {
+import { specialAdd } from '../action/index'
+const mapHomeStateToProps = (store) => {
     return {
         SpecialValue: store.SpecialReducer.data,
-        ClientValue: store.ClientReducer.data
+        ClientValue: store.ClientReducer.data,
+    }
+}
+const mapHomeDispathToProps = (dispatch) => {
+    return {
+        SpecialAdd: () => { dispatch(specialAdd()) }
     }
 }
 const mapBlogStateToProps = (store) => {
@@ -25,7 +31,8 @@ const mapAboutStateToProps = (store) => {
     }
 }
 export const StateHome = connect(
-    mapStateToProps
+    mapHomeStateToProps,
+    mapHomeDispathToProps
 )(Home)
 
 export const StateBlog = connect(

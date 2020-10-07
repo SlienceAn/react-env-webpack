@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slide from '../assets/slider-bg.jpg'
 import TypeImg from '../assets/type-bg.jpg'
 import { Col, Form, Button, Card } from 'react-bootstrap'
 import { Container, SlideSection, HolidyType } from '../component/static/publicStyle'
 import TypeBg from '../assets/big-icons.png'
+import people from '../assets/img_avatar.png'
 export const SelectPlace = () => {
     const style = {
         whiteSpace: 'nowrap',
@@ -64,6 +65,18 @@ const Clients = (props) => {
         <div className="text-center mb-3 mt-3">
             <h2>旅遊回饋</h2>
             <p>聽聽看其他人怎麼說!</p>
+            <div className="w-80 d-flex mb-3">
+                {Object.values(props).map((el, index) =>
+                    <Col key={index}>
+                        <Card>
+                            <Card.Img src={people} style={{ width: '100%' }}></Card.Img>
+                            <Card.Body>
+                                <Card.Title>{el.title}</Card.Title>
+                                <Card.Text>{el.text}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>)}
+            </div>
         </div>
     )
 }
@@ -85,6 +98,7 @@ const Home = (props) => {
                 </section>
             </SlideSection>
             <SelectPlace />
+            <h1>{props.TestValue}</h1>
             <SpecialOffer {...props.SpecialValue} />
             <SlideSection bg={TypeImg} size="465px">
                 {pos.map(el => <section className="p-5" key={el.pos}>

@@ -4,7 +4,9 @@ import { initSpecial, initClient, initBlog, initHoliday, initAbout } from '../st
 const SpecialReducer = (state = initSpecial, action) => {
     switch (action.type) {
         case specialChange:
-            return state
+            const newSpecial = Object.assign({}, state)
+            newSpecial.data.push(action.value)
+            return newSpecial
         default:
             return state
     }
@@ -36,10 +38,11 @@ const AboutReducer = (state = initAbout, action) => {
             return state
     }
 }
+
 export const DataReducer = combineReducers({
     SpecialReducer,
     ClientReducer,
     BlogReducer,
     HolidayReducer,
-    AboutReducer
+    AboutReducer,
 })

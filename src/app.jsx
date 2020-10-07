@@ -10,7 +10,10 @@ import { Provider } from 'react-redux'
 import { DataReducer } from './redux/reducer/index'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import './assets/page.scss'
-const store = createStore(DataReducer)
+const store = createStore(
+    DataReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 const RouterMap = () => {
     let location = useLocation();
     return (
@@ -18,7 +21,7 @@ const RouterMap = () => {
             <CSSTransition
                 key={location.pathname}
                 classNames="page"
-                timeout={100}
+                timeout={200}
             >
                 <Switch>
                     <Route exact path="/" component={StateHome} />

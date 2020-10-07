@@ -4,12 +4,12 @@ const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
     entry: './src/server.js',
-    target: 'node',
+    target: 'node', //目標執行環境，預設為web
     externals: [nodeExternals()],
     output: {
-        libraryTarget: 'commonjs2',
+        // libraryTarget: 'commonjs2', //以CommonJS2標準繪製出函數
         filename: 'bundle_server.js',
-        path: path.resolve(__dirname, './dist')
+        path: path.resolve(__dirname, './server'),
     },
     module: {
         rules: [
@@ -24,7 +24,7 @@ module.exports = {
                 },
 
             },
-            {
+            { //忽略CSS，CSS不能被打包進入服務端的程式中
                 test: [/\.scss$/, /\.css$/],
                 use: ['ignore-loader']
             },
