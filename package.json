@@ -10,7 +10,7 @@
     "build": "webpack -p",
     "server": "webpack --config webpack.server.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
