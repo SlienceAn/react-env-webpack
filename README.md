@@ -1,14 +1,24 @@
-React旅遊網站範例
+React-旅遊網站範例練習
 
-此專案環境不依靠CRA生成，而是自我建立webpack!!
+手動配置webpack建立react開發環境開發，並使用react-redux架構。
 
-用到的技術：
-React 
-Redux 
-React-Redux 
-Webpack
-EXpress 
-styled-components
+使用 express 撰寫 API 串接 。
+ 
+### Framework
+
+React、React Hooks
+
+### CSS Framework
+
+SCSS、styled-components、react-bootstrap
+
+### libary
+
+Redux、React-Redux、Redux-Thunk、Webpack
+
+### other
+
+axios、react-transition-group、react-router-dom
 
 ### npm run start
 
@@ -26,4 +36,9 @@ styled-components
 
 佈署至github pages
 
+### 資料來源
+
 網站設計參考 : https://p.w3layouts.com/demos/voyage/web/index.html#
+
+旅遊資料來源 : 東南旅遊、Airbnb
+ 　
