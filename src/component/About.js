@@ -15,16 +15,18 @@ const About = (props) => {
     return (
         <div>
             <SelectPlace search={props.SearchPlace} />
-            <div className="timeline-section">
-                {AboutValue.map((el, index) =>
-                    <div className={CheckDirect(index)} key={el.title}>
-                        <div className="content">
-                            <h2>{el.title}</h2>
-                            <p>{el.text}</p>
+            {!AboutValue ? <h1>讀取中</h1> :
+                <div className="timeline-section">
+                    {AboutValue.map((el, index) =>
+                        <div className={CheckDirect(index)} key={el.title}>
+                            <div className="content">
+                                <h2>{el.title}</h2>
+                                <p>{el.text}</p>
+                            </div>
                         </div>
-                    </div>
-                )}
-            </div>
+                    )}
+                </div>
+            }
         </div>
 
     );
