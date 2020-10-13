@@ -7,7 +7,7 @@ module.exports = {
     target: 'node', //目標執行環境，預設為web
     externals: [nodeExternals()],
     output: {
-        // libraryTarget: 'commonjs2', //以CommonJS2標準繪製出函數
+        libraryTarget: 'commonjs2', //以CommonJS2標準繪製出函數
         filename: 'bundle_server.js',
         path: path.resolve(__dirname, './server'),
     },

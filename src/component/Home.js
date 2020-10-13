@@ -1,53 +1,68 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import Slide from '../assets/slider-bg.jpg'
 import TypeImg from '../assets/type-bg.jpg'
-import { Col, Form, Button, Card } from 'react-bootstrap'
-import { Container, SlideSection, HolidyType } from '../component/static/publicStyle'
+import { Col, Form, Button, Card, Row } from 'react-bootstrap'
+import { SlideSection, HolidyType } from '../component/static/publicStyle'
 import TypeBg from '../assets/big-icons.png'
-import people from '../assets/img_avatar.png'
-export const SelectPlace = () => {
+import { useHistory } from 'react-router-dom'
+export const SelectPlace = (props) => {
+    let history = useHistory()
+    const [condition, setCon] = useState({
+        place: '',
+        date: ''
+    })
     const style = {
         whiteSpace: 'nowrap',
         paddingRight: '20px',
+        paddingTop: '5px',
         color: '#aaa',
-        fontSize: '1.5rem'
     }
     const aside = {
         borderRight: '.5px solid #aaa',
         textAlign: 'right'
     }
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        const newCon = Object.assign({}, condition)
+        newCon[name] = value
+        setCon(newCon)
+    }
+    const searchSubmit = () => {
+        props.search(condition)
+        history.push('/place')
+    }
     return (
         <div className="w-100 common-bg">
-            <Container color="#fff">
-                <Col lg={2} className="p-2" style={aside}>
+            <Row className="m-0" color="#fff">
+                <Col lg={2} className="p-2 find text-white" style={aside}>
                     <h6>尋找你的</h6>
                     <h4>假期 !!</h4>
                 </Col>
-                <Col lg={10} className="d-flex align-items-center">
-                    <Col className="d-flex">
-                        <label htmlFor="where" style={style}>地點</label>
-                        <Form.Control id="where" />
+                <Col lg={10} className="align-items-center searchType">
+                    <Col lg={5} className="d-flex search">
+                        <div htmlFor="where" style={style}>地點</div>
+                        <Form.Control type="text" name="place" onChange={handleChange} />
                     </Col>
-                    <Col className="d-flex">
+                    <Col lg={5} className="d-flex search">
                         <label htmlFor="date" style={style}>日期</label>
-                        <Form.Control id="date" />
+                        <Form.Control type="datetime-local" name="date" onChange={handleChange} />
                     </Col>
-                    <Button variant="info">搜尋</Button>
+                    <Button variant="info" className="search-btn" onClick={searchSubmit}>搜尋</Button>
                 </Col>
-            </Container>
+            </Row>
         </div>
     )
 }
-const SpecialOffer = (props) => {
+export const SpecialOffer = (props) => {
     return (
         <React.Fragment>
             <div className="text-center mt-3 mb-3">
                 <h2>特別優惠</h2>
                 <p>2020最受歡迎旅遊地點</p>
             </div>
-            <section className="w-80 d-flex mb-3">
+            <section className="w-80 d-flex mb-3 flex-wrap">
                 {Object.values(props).map(el =>
-                    <Col key={el.img}>
+                    <Col lg={3} md={6} key={el.img} className="mb-3">
                         <Card>
                             <Card.Img src={el.img} alt="missing" />
                             <Card.Body>
@@ -60,22 +75,23 @@ const SpecialOffer = (props) => {
         </React.Fragment>
     )
 }
-const Clients = (props) => {
+export const Clients = (props) => {
     return (
         <div className="text-center mb-3 mt-3">
-            <h2>旅遊回饋</h2>
-            <p>聽聽看其他人怎麼說!</p>
-            <div className="w-80 d-flex mb-3">
+            <h2>獨特房源!</h2>
+            <p>換個環境，安頓下來。探索附近適合居住、工作或放鬆休息的住宿</p>
+            <div className="text-left w-80 d-flex mb-3 flex-wrap">
                 {Object.values(props).map((el, index) =>
-                    <Col key={index}>
+                    <div key={index} className="mb-3 hotel-block">
                         <Card>
-                            <Card.Img src={people} style={{ width: '100%' }}></Card.Img>
+                            <Card.Img src={el.img} style={{ width: '100%' }}></Card.Img>
                             <Card.Body>
-                                <Card.Title>{el.title}</Card.Title>
-                                <Card.Text>{el.text}</Card.Text>
+                                <Card.Title><strong>{el.title}</strong></Card.Title>
+                                <Card.Text>
+                                    <i className="fas fa-star" />  {el.text}</Card.Text>
                             </Card.Body>
                         </Card>
-                    </Col>)}
+                    </div>)}
             </div>
         </div>
     )
@@ -97,8 +113,7 @@ const Home = (props) => {
                     <h3>旅行是對庸常生活的一次越獄 !</h3>
                 </section>
             </SlideSection>
-            <SelectPlace />
-            <h1>{props.TestValue}</h1>
+            <SelectPlace search={props.SearchPlace} />
             <SpecialOffer {...props.SpecialValue} />
             <SlideSection bg={TypeImg} size="465px">
                 {pos.map(el => <section className="p-5" key={el.pos}>

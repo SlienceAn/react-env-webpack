@@ -6,8 +6,8 @@ const Footer = () => {
     const tags = ['React', 'Redux', 'React-Redux', 'Webpack', 'React-router-dom', 'styled-components']
     return (
         <footer className="w-100" style={{ background: '#2C3E50' }}>
-            <Container color="#fff">
-                <Col className="p-3">
+            <div className="footer-nav w-80">
+                <Col lg={3} md={6} className="p-3">
                     <header className="footer-header">寫信給我們</header>
                     <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
                     <Form className="d-flex">
@@ -15,7 +15,7 @@ const Footer = () => {
                         <Button variant="info" className="ml-2">GO</Button>
                     </Form>
                 </Col>
-                <Col className="p-3">
+                <Col lg={3} md={6} className="p-3">
                     <header className="footer-header">最新消息</header>
                     <div className="d-flex">
                         <div className="news-plc">
@@ -36,15 +36,15 @@ const Footer = () => {
                         </div>
                     </div>
                 </Col>
-                <Col className="p-3">
+                <Col lg={3} md={6} className="p-3">
                     <header className="footer-header">標籤</header>
                     {tags.map(el => <div className="tags" key={el}>{el}</div>)}
                 </Col>
-                <Col className="p-3">
+                <Col lg={3} md={6} className="p-3">
                     <header className="footer-header">住址</header>
                     <p>DieSachbearbeiter Schonhauser Allee 167c,10435 Berlin Germany E-mail:moin@blindtextgenerator.de</p>
                 </Col>
-            </Container>
+            </div>
             <section style={{ borderTop: '.5px solid #aaa', textAlign: 'center' }}>
                 <p className="mt-3" style={{ color: '#7F91A2' }}>© 2014 Voyage. All rights reserved | Template by W3layouts</p>
                 <div style={{ width: '3%', margin: '0 auto' }}>

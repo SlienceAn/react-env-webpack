@@ -19,6 +19,7 @@ export const SlideSection = styled.div`
     text-align:center;
     align-items:center;
     justify-content:center;
+    flex-wrap: wrap
 `
 export const HolidyType = styled.div`
     width:126px;  

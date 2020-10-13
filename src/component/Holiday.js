@@ -4,7 +4,7 @@ import { SelectPlace } from './Home'
 const Holiday = (props) => {
     return (
         <div>
-            <SelectPlace />
+            <SelectPlace search={props.SearchPlace}/>
             <div className="w-80 mt-3 mb-3 d-flex flex-wrap">
                 {props.HolidayValue.map(el =>
                     <Col lg={4} className="mb-3" key={el}>

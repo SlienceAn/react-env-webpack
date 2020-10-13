@@ -1,0 +1,37 @@
+.page-enter {
+    opacity: 0;
+}
+
+.page-enter-active {
+    animation: move .5s linear forwards;
+}
+
+.page-text-exit-done {
+    opacity: 0;
+}
+
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes leave {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+}

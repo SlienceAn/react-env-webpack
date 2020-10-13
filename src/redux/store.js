@@ -16,6 +16,11 @@ import D7 from '../assets/d7.jpg'
 import D5 from '../assets/d5.jpg'
 import D3 from '../assets/d3.jpg'
 import D1 from '../assets/d1.jpg'
+import h1 from '../assets/hotel-01.jpg'
+import h2 from '../assets/hotel-02.jpg'
+import h3 from '../assets/hotel-03.jpg'
+import h4 from '../assets/hotel-04.jpg'
+import h5 from '../assets/hotel-05.jpg'
 export const initSpecial = {
     data: [
         { img: S1, title: '北陸立山紅葉、合掌村兼六園楓情、名古屋魅力遊5日', text: '$39,999' },
@@ -28,36 +33,32 @@ export const initSpecial = {
 
 export const initClient = {
     data: [
-        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '測試回饋', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: h1, title: '海漾小木屋) 一邊森林;一邊太平洋(適合1-4人獨棟+廚房)', text: '4位 · 1間臥室 · 3張床 · 1間衛浴' },
+        { img: h2, title: '美式别墅峇里島風/捷運站接送/九份宜蘭淡水陽明山北台灣包車服務', text: '4位 · 1間臥室 · 2張床 · 1.5間衛浴' },
+        { img: h3, title: '獨立陽台，大落地窗，厦大慵懒角落的榻榻米工業風', text: '2位 · 1間臥室 · 1張床 · 1間衛浴' },
+        { img: h4, title: '武夷山景區南門(南源嶺民宿村)至岩茶宿半天妖舒適大床房', text: '2位 · 1間臥室 · 1張床 · 1.5間衛浴' },
+        { img: h5, title: 'Kellys House包棟獨享一至三樓。大交誼廳。第五人以上加價。近大東夜市', text: '8位 · 1間臥室 · 2張床 · 1間衛浴' },
 
     ]
 }
 
 export const initBlog = {
     data: [
-        { img: blogPlc01, admin: adminPic01, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { img: blogPlc02, admin: adminPic02, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { img: blogPlc03, admin: adminPic03, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { img: blogPlc04, admin: adminPic04, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: blogPlc01, articleID: 1, admin: adminPic01, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: blogPlc02, articleID: 2, admin: adminPic02, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: blogPlc03, articleID: 3, admin: adminPic03, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+        { img: blogPlc04, articleID: 4, admin: adminPic04, title: 'LOREM IPSUM IS TYPESETTING INDUSTRY.', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
 
     ]
 }
 export const initHoliday = {
     data: [D1, D2, D3, D5, D6, D7]
 }
-export const initAbout = {
-    data: [
-        { title: '2016-07-28', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '2017-04-22', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '2017-08-25', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '2018-09-12', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '2018-10-02', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '2019-01-05', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-        { title: '2020-01-09', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-
-    ]
-}
+//佈署用
+export const url = "https://silence-react-travel-api.herokuapp.com/"
+//本地端用
+// export const url = "http://localhost:3000/"
+export const user = url + "user"
+export const sign = url + "sign"
+export const place = url + "place"
+export const about = url + "about"

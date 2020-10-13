@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
     <html>
             <head></head>
             <body>
-                <div id="app">${content}</div>
+                <div id="app"></div>
                 <script src="bundle_server.js"></script>
             </body>
         </html>

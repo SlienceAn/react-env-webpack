@@ -1,6 +1,17 @@
+@import './device.scss';
 $card-main-color:rgb(44, 62, 80);
 $timeline-bg:#EDEEF0;
 $content:rgb(224, 224, 224);
+
+%triangle {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+
+}
 
 .timeline-section {
     position: relative;
@@ -17,13 +28,26 @@ $content:rgb(224, 224, 224);
         bottom: 0;
         left: 50%;
         margin-left: -3px;
+
+        //導入RWD樣式
+        @include min-device {
+            left: 31px;
+        }
     }
+
 }
 
 .timeline-container {
     padding: 10px 40px;
     position: relative;
     width: 50%;
+
+    @include min-device {
+        width: 100%;
+        padding: 15px 55px;
+    }
+
+    //線上圓圈
 
     &::after {
         content: '';
@@ -36,45 +60,58 @@ $content:rgb(224, 224, 224);
         top: 15px;
         border-radius: 50%;
         z-index: 1;
+
+        @include min-device {
+            left: 17px;
+        }
     }
 }
 
-
-.triangle {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-
-}
 
 .left {
     left: 0;
 
     &::before {
-        @extend .triangle;
+        @extend %triangle;
         right: 30px;
         border: medium solid white;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent $content;
+
+        @include min-device {
+            left: 45px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $content transparent transparent;
+        }
     }
 }
 
 .right {
     left: 50%;
 
+    @include min-device {
+        left: 0
+    }
+
     &::before {
-        @extend .triangle;
+        @extend %triangle;
         left: 30px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent $content transparent transparent;
+
+        @include min-device {
+            left: 45px;
+        }
     }
 
     &::after {
         left: -12.5px;
+
+        @include min-device {
+            left: 17px;
+        }
     }
 }
 

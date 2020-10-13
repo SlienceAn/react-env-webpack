@@ -1,7 +1,10 @@
-import React from 'react'
-import '../assets/timeline.scss'
+import React, { useEffect } from 'react'
+import '../assets/css/timeline.scss'
 import { SelectPlace } from '../component/Home'
+import PropTypes from 'prop-types'
 const About = (props) => {
+    const AboutValue = props.AboutValue
+    const AboutFunc = props.AboutUs()
     const CheckDirect = (val) => {
         if (val % 2 !== 0) {
             return "timeline-container right"
@@ -11,9 +14,9 @@ const About = (props) => {
     }
     return (
         <div>
-            <SelectPlace />
+            <SelectPlace search={props.SearchPlace} />
             <div className="timeline-section">
-                {props.AboutValue.map((el, index) =>
+                {AboutValue.map((el, index) =>
                     <div className={CheckDirect(index)} key={el.title}>
                         <div className="content">
                             <h2>{el.title}</h2>
@@ -26,5 +29,8 @@ const About = (props) => {
 
     );
 };
-
+About.propTypes = {
+    AboutValue: PropTypes.array.isRequired,
+    AboutFunc: PropTypes.func.isRequired
+}
 export default About;

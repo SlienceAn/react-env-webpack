@@ -1,12 +1,13 @@
 import React from 'react'
 import { Col, Card, Button } from 'react-bootstrap'
 import { SelectPlace } from './Home'
+import { Link } from 'react-router-dom'
 const Blog = props => {
     return (
         <div>
-            <SelectPlace />
+            <SelectPlace search={props.SearchPlace}/>
             <div className="w-80 mt-3 mb-3 d-flex flex-wrap">
-                {props.BlogValue.map(el => <Col lg={6} className="mb-3" key={el.admin}>
+                {props.BlogValue.map((el, index) => <Col lg={6} className="mb-3" key={el.admin}>
                     <Card>
                         <Card.Img src={el.img} />
                         <div className="blog-section d-flex justify-content-center">
@@ -27,7 +28,11 @@ const Blog = props => {
                         <Card.Body>
                             <Card.Title>{el.title}</Card.Title>
                             <Card.Text>{el.text}</Card.Text>
-                            <Button variant="dark">看更多</Button>
+                            <Button variant="dark">
+                                <Link to={`/More/${index + 1}`}>
+                                    <div className="text-white">看更多</div>
+                                </Link>
+                            </Button>
                         </Card.Body>
                     </Card>
                 </Col>)}
