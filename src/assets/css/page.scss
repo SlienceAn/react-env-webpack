@@ -6,7 +6,15 @@
     animation: move .5s linear forwards;
 }
 
-.page-text-exit-done {
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit-active {
+    opacity: 0;
+}
+
+.page-exit-done {
     opacity: 0;
 }
 

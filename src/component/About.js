@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import '../assets/css/timeline.scss'
 import { SelectPlace } from '../component/Home'
 import PropTypes from 'prop-types'
+import '../assets/css/loader.scss'
 const About = (props) => {
     const AboutValue = props.AboutValue
-    const AboutFunc = props.AboutUs()
     const CheckDirect = (val) => {
         if (val % 2 !== 0) {
             return "timeline-container right"
@@ -12,10 +12,16 @@ const About = (props) => {
             return "timeline-container left"
         }
     }
+    useEffect(() => {
+        props.AboutUs()
+    }, [])
     return (
         <div>
             <SelectPlace search={props.SearchPlace} />
-            {!AboutValue ? <h1>讀取中</h1> :
+            {AboutValue.length === 0 ?
+                <div className="w-80 d-flex align-items-center justify-content-center" style={{ minHeight: '50vh' }}>
+                    <div className="loader"></div>
+                </div> :
                 <div className="timeline-section">
                     {AboutValue.map((el, index) =>
                         <div className={CheckDirect(index)} key={el.title}>
@@ -33,6 +39,5 @@ const About = (props) => {
 };
 About.propTypes = {
     AboutValue: PropTypes.array.isRequired,
-    AboutFunc: PropTypes.func.isRequired
 }
 export default About;
