@@ -40,7 +40,7 @@ const AboutReducer = (state = { data: [] }, action) => {
     switch (action.type) {
         case 'about_change':
             const val = Object.assign({}, state)
-            val.data = action.value.data
+            val.data = action.value
             return val
         default:
             return state

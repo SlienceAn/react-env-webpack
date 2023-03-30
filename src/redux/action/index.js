@@ -13,8 +13,10 @@ export const specialAdd = () => {
 }
 export const AboutUs = () => {
     return (dispatch) => {
+        console.log(about)
         axios.get(about).then(res => {
             const data = res.data
+            console.log(data)
             dispatch({ type: 'about_change', value: data })
         }).catch(err => {
             console.log(err)

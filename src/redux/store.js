@@ -54,10 +54,8 @@ export const initBlog = {
 export const initHoliday = {
     data: [D1, D2, D3, D5, D6, D7]
 }
-//佈署用
-export const url = "https://silence-react-travel-api.herokuapp.com/"
-//本地端用
-// export const url = "http://localhost:3000/"
+
+export const url = process.env.NODE_ENV === "development" ? "http://localhost:3000/" : "https://react-travel-express.vercel.app/"
 export const user = url + "user"
 export const sign = url + "sign"
 export const place = url + "place"
